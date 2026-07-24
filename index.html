@@ -2,18 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- This is the line that handles the redirect -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Immediate Redirect -->
     <meta
       http-equiv="refresh"
       content="0; url=https://thilankadilshan.vercel.app/"
     />
     <title>Redirecting...</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #121212;
+        color: #ffffff;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #272727;
+        border-top: 5px solid #007bff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      h2 {
+        margin: 0 0 10px 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      p {
+        color: #a0a0a0;
+        font-size: 0.9rem;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease-in-out;
+      }
+
+      a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
+    <div class="spinner"></div>
+    <h2>Redirecting to the new portfolio...</h2>
     <p>
-      Redirecting to my new portfolio... If you are not redirected
-      automatically,
+      If you are not redirected automatically,
       <a href="https://thilankadilshan.vercel.app/">click here</a>.
     </p>
+
+    <!-- Fallback JavaScript redirect just in case the meta tag gets blocked -->
+    <script>
+      setTimeout(() => {
+        window.location.href = "https://thilankadilshan.vercel.app/";
+      }, 1000);
+    </script>
   </body>
 </html>
